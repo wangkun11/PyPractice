@@ -21,27 +21,27 @@ from pylab import *
 # show()
 
 #2、绘制轮廓图、直方图====================================================
-# im=array(Image.open('../image/dog.jpg').convert('L'))
-# #初始化一个窗口
-# figure()
-# #将此窗口设置为灰度
-# gray()
-# #对im中每一个点施加相同阈值，然后绘制轮廓
-# contour(im,origin='image')
-# axis('equal')
-# axis('off')
-# 
-# #初始化第二个窗口
-# figure()
-# #flatten：将任意数组按照行优先准则转换成一维数组，
-# #hist:绘制一维数组的直方图，表示图像中的像素分布情况
-# hist(im.flatten(),128)
-# show()
-#3、交互式标注=====================================
-im=array(Image.open('../image/dog.jpg'))
-imshow(im)
-print 'Please select 3 points'
-x=ginput(3)
-print 'your clicked point is:',x
+im=array(Image.open('../image/dog.jpg').convert('L'))
+#初始化一个窗口
+figure()
+#将此窗口设置为灰度
+gray()
+#对im中每一个点施加相同阈值，然后绘制轮廓
+contour(im,origin='image')
+axis('equal')
+axis('off')
+ 
+#初始化第二个窗口
+figure()
+#flatten：将任意数组按照行优先准则转换成一维数组，
+#hist:绘制一维数组的直方图，表示图像中的像素分布情况
+hist(im.flatten(),128)
 show()
+#3、交互式标注=====================================
+# im=array(Image.open('../image/dog.jpg'))
+# imshow(im)
+# print 'Please select 3 points'
+# x=ginput(3)
+# print 'your clicked point is:',x
+# show()
 
